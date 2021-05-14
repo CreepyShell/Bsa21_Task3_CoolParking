@@ -1,0 +1,12 @@
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\bin\Debug\net5.0\CoolParking.BL.deps.json
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\bin\Debug\net5.0\CoolParking.BL.dll
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\bin\Debug\net5.0\ref\CoolParking.BL.dll
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\bin\Debug\net5.0\CoolParking.BL.pdb
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\obj\Debug\net5.0\CoolParking.BL.csprojAssemblyReference.cache
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\obj\Debug\net5.0\CoolParking.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\obj\Debug\net5.0\CoolParking.BL.AssemblyInfoInputs.cache
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\obj\Debug\net5.0\CoolParking.BL.AssemblyInfo.cs
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\obj\Debug\net5.0\CoolParking.BL.csproj.CoreCompileInputs.cache
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\obj\Debug\net5.0\CoolParking.BL.dll
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\obj\Debug\net5.0\ref\CoolParking.BL.dll
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\CoolParking.BL\obj\Debug\net5.0\CoolParking.BL.pdb

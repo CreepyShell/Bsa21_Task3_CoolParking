@@ -1,0 +1,16 @@
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\bin\Debug\net5.0\ConsoleClient.exe
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\bin\Debug\net5.0\ConsoleClient.deps.json
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\bin\Debug\net5.0\ConsoleClient.runtimeconfig.json
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\bin\Debug\net5.0\ConsoleClient.runtimeconfig.dev.json
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\bin\Debug\net5.0\ConsoleClient.dll
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\bin\Debug\net5.0\ref\ConsoleClient.dll
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\bin\Debug\net5.0\ConsoleClient.pdb
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.csprojAssemblyReference.cache
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.AssemblyInfoInputs.cache
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.AssemblyInfo.cs
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.csproj.CoreCompileInputs.cache
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.dll
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ref\ConsoleClient.dll
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.pdb
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.genruntimeconfig.cache
