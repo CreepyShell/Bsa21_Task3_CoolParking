@@ -1,13 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CoolParking.BL.Services;
 using CoolParking.BL.Interfaces;
 using CoolParking.BL.Models;
-using System.Text.RegularExpressions;
+using CoolParking.WebAPI.ServerModerls;
 
 namespace CoolParking.WebAPI.Controllers
 {
@@ -33,20 +28,20 @@ namespace CoolParking.WebAPI.Controllers
         public ActionResult<string> AllTransactions()
         {
             if (!System.IO.File.Exists(Settings.LogPath))
-                return  NotFound("Log file not found");
+                return NotFound("Log file not found");
             return Ok(Service.ReadFromLog());
         }
 
         [HttpPut]
         [Route("topUpVehicle")]
-        public ActionResult<Vehicle> TopUpVehicle(string id, decimal sum)
+        public ActionResult<Vehicle> TopUpVehicle([FromBody] TopUp topUp)
         {
-            if (sum <= 0)
-                return BadRequest("The sum can not be less than zero");
-            Vehicle vehicle = Vehicle.GetVehicleById(id);
+            Vehicle vehicle = Vehicle.GetVehicleById(topUp.Id);
             if (vehicle == null)
                 return NotFound("Vehicle with this id did not found");
-            Service.TopUpVehicle(id, sum);
+            if (topUp.Sum <= 0)
+                return BadRequest("The sum can not be less than zero or equals zero");
+            Service.TopUpVehicle(topUp.Id, topUp.Sum);
             return Ok(vehicle);
         }
     }

@@ -13,3 +13,4 @@ D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\n
 D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ref\ConsoleClient.dll
 D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.pdb
 D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.genruntimeconfig.cache
+D:\RepoCoolParking\Bsa21_task3_CoolParking\CoolParking\ConsoleClient\obj\Debug\net5.0\ConsoleClient.csprojAssemblyReference.cache

@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using CoolParkingConsole.ClientModels;
 using System.Net;
-using System.Net.Http.Json;
-using System.Net.Http.Headers;
 
 namespace CoolParkingConsole
 {
@@ -42,8 +38,7 @@ namespace CoolParkingConsole
 
         public static async Task<string> AddVehicle(VehicleClient vehicle)//400
         {
-            var resp = await Client.SendAsync(new HttpRequestMessage(HttpMethod.Post, BaseUrl +
-                $"vehicles?id={vehicle.Id}&vehicleType={vehicle.VehicleType}&balance={vehicle.Balance}"));
+            var resp = await Client.PostAsync(BaseUrl + "vehicles", new StringContent(JsonSerializer.Serialize(vehicle), Encoding.UTF8, "application/json"));
             if (resp.StatusCode == HttpStatusCode.BadRequest)
                 throw new ArgumentException("This vehicle is already on parking or invalid body");
             return "This vehicle was successfully added:" + await resp.Content.ReadAsStringAsync();
@@ -60,7 +55,6 @@ namespace CoolParkingConsole
         public static async Task<TransactionInfoClient[]> GetLastTransactions()
         {
             var resp = await Client.GetAsync(BaseUrl + "transactions/last");
-            Console.WriteLine(resp.Content.ReadAsStringAsync().Result);
             return JsonSerializer.Deserialize<TransactionInfoClient[]>(await resp.Content.ReadAsStringAsync());
         }
 
@@ -74,8 +68,12 @@ namespace CoolParkingConsole
 
         public static async Task<VehicleClient> TopUpVehicle(string id, decimal sum)// 400 and 404
         {
-
-            var resp = await Client.SendAsync(new HttpRequestMessage(HttpMethod.Put, BaseUrl + $"transactions/topUpVehicle?id={id}&sum={sum}"));
+            var info = new
+            {
+                id = id,
+                Sum = sum
+            };
+            var resp = await Client.PutAsync(BaseUrl + "transactions/topUpVehicle", new StringContent(JsonSerializer.Serialize(info), Encoding.UTF8, "application/json"));
             if (resp.StatusCode == HttpStatusCode.NotFound || resp.StatusCode == HttpStatusCode.BadRequest)
                 throw new ArgumentException("Id not found or sum less than zero");
             return JsonSerializer.Deserialize<VehicleClient>(await resp.Content.ReadAsStringAsync());
@@ -83,3 +81,4 @@ namespace CoolParkingConsole
 
     }
 }
+

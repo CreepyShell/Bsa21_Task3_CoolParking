@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using CoolParking.BL.Models;
 using CoolParking.BL.Interfaces;
 using System.Text.RegularExpressions;
+using CoolParking.WebAPI.ServerModerls;
 
 namespace CoolParking.WebAPI.Controllers
 {
@@ -32,23 +33,24 @@ namespace CoolParking.WebAPI.Controllers
                 return NotFound("Vehicle with this id is not found");
             return vehicle;
         }
-        
+
         [HttpPost]
-        public ActionResult<Vehicle> AddVehicle(string id, VehicleType vehicleType, decimal balance)
+        public ActionResult<Vehicle> AddVehicle([FromBody] VenicleServer Newvehicle)
         {
-            if (id == null || vehicleType == 0 || balance == 0)
+            if (Newvehicle.Id == null || Newvehicle.VehicleType == 0 || Newvehicle.Balance == 0)
                 return BadRequest("No one or several needed parameters");
             Vehicle vehicle;
             try
             {
-                vehicle = new Vehicle(id, vehicleType, balance);
+                vehicle = new Vehicle(Newvehicle.Id, Newvehicle.VehicleType, Newvehicle.Balance);
                 Service.AddVehicle(vehicle);
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-            return Created("./CoolParking/Moderls/Parking.Vehicles", vehicle);
+
+            return Created("./CoolParking/Models/Parking.Vehicles", vehicle);
         }
         [HttpDelete("{id}")]
         public ActionResult DeleteVehicles(string id)

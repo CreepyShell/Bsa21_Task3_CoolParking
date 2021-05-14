@@ -11,7 +11,6 @@ namespace CoolParking
         {
             DisplayMainMessage();
             MainMethod();
-
         }
         static void DisplayMainMessage()
         {
@@ -115,12 +114,12 @@ namespace CoolParking
                         Console.WriteLine("Entered incorrect number, try again");
                         break;
                 }
-            }          
+            }
             catch (ArgumentException ex)
             {
                 Console.WriteLine($"Mistake:{ex.Message}");
             }
-            
+
             catch (InvalidOperationException ex)
             {
                 Console.WriteLine($"Mistake:{ex.Message}");

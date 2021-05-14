@@ -75,6 +75,7 @@ namespace CoolParking.BL.Services
                     Vehicles[i].Balance -= LessZero * Settings.Fine + Vehicles[i].Balance;//вираховуємо баланс боржника
                     continue;
                 }
+                parking.TransactionInfos.Add(new TransactionInfo(Settings.Bill(Vehicles[i].VehicleType) * Settings.Fine, Vehicles[i].Id, System.DateTime.Now));
                 Vehicles[i].Balance -= Settings.Bill(Vehicles[i].VehicleType) * Settings.Fine;
                 parking.Balance += Settings.Bill(Vehicles[i].VehicleType) * Settings.Fine;
                 parking.CurentBalance += Settings.Bill(Vehicles[i].VehicleType) * Settings.Fine;
